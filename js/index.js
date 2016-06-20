@@ -1,6 +1,7 @@
 var options = {
     id: 'main',
     titleText: 'ECharts 入门示例',
+    titleSubtext: '柱状图',
     legendData: ['销量'],
     xAxisData: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"],
     series: [{

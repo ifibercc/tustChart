@@ -6,13 +6,13 @@ var tustChart = function (options) {
     }
     var opt = {
         title: {
-            text: ''
-        },
-        tooltip: {
-
+            text: '',
+            subtext: '',
+            left: 'center'
         },
         legend: {
-            data: null
+            data: null,
+            left: 'right'
         },
         xAxis: {
             data: null
@@ -20,9 +20,23 @@ var tustChart = function (options) {
         yAxis: {
 
         },
+        tooltip: {
+        },
+        toolbox: {
+            show: true,
+            feature: {
+                saveAsImage: {},
+                magicType: {
+                    type: ['line', 'bar']
+                }
+            },
+            top: 'bottom',
+            orient: 'vertical'
+        },
         series: null
     };
     opt.title.text = options.titleText || '';
+    opt.title.subtext = options.titleSubtext || '';
     opt.legend.data = options.legendData || null;
     opt.xAxis.data = options.xAxisData || null;
     opt.yAxis.data = options.yAxisData || null;
