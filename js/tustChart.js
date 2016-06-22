@@ -1,3 +1,9 @@
+/**
+ *  author: Lemoo
+ *  email: ifibercc@gmail.com
+ *  date: 2016-06-20
+ *  version: 0.0.1
+ */
 var tustChart = function (options) {
     var me = this;
     if (options.id === '' || options.id === null || document.getElementById(options.id) === null) {
@@ -21,17 +27,18 @@ var tustChart = function (options) {
 
         },
         tooltip: {
+
         },
         toolbox: {
             show: true,
             feature: {
-                saveAsImage: {},
+                // pie type will a bug
                 magicType: {
-                    type: ['line', 'bar']
-                }
+                    type: ['bar', 'line']
+                },
+                saveAsImage: {}
             },
-            top: 'bottom',
-            orient: 'vertical'
+            top: 'bottom'
         },
         series: null
     };
@@ -46,4 +53,5 @@ var tustChart = function (options) {
     me.currentChart = chart;
     chart.setOption(opt);
 };
+
 tustChart.prototype.constructor = tustChart;
